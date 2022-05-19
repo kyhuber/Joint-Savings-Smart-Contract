@@ -15,6 +15,8 @@ The contract allows the user to check the contract balance, view the last addres
 
 The Joint Savings Smart Contract includes requirements to ensure the recipient address matches one of the accounts provided. There is a requirement to ensure there are sufficient funds in the contract to support the withdraw transaction, along with a fallback function.
 
+Screenshots from successful transactions are contained within the Image folder of this repository.
+
 ---
 
 ## Technologies
