@@ -2,11 +2,18 @@
 
 A Solidity smart contract that governs usage of a joint savings account. The contract accepts multiple user addresses and supports Ether transactions.
 
-First, the contract creates variables for two Ethereum accounts and a balance for the contract. Next, the contract defines functions for withdrawals and deposits. Within the contract, the user must select an amount and a recipient for each withdrawal transaction.
+There are three functions in the contract with differing inputs.
+Deposit: Takes a value in wei, gwei, finney, or ether and credits the amount to the contract balance.
+Set Accounts: Takes two account addresses to be used for withdrawal.
+Withdraw: Takesan amount in Wei and a recipient address.
 
-The contract includes requirements to ensure the recipients are valid Ethereum addresses, that there are sufficient funds in the contract to support the transaction, along with a fallback function.
+![Deposit setAccounts withdraw](https://user-images.githubusercontent.com/69730757/169377160-5321fb7d-e91f-4c0e-ad8a-c9c73650740a.png)
 
-Features also exist within the Remix UI to check the contract balance, last account to withdraw, and last withdrawal amount.
+The contract allows the user to check the contract balance, view the last address to withdraw, and the last withdrawal amount.
+
+![contractBalance lastToWithdraw lastWithdrawalAmount](https://user-images.githubusercontent.com/69730757/169377179-f487eee8-e710-4a38-b3bf-9cba51ef7fae.png)
+
+The Joint Savings Smart Contract includes requirements to ensure the recipient address matches one of the accounts provided. There is a requirement to ensure there are sufficient funds in the contract to support the withdraw transaction, along with a fallback function.
 
 ---
 
@@ -16,12 +23,13 @@ The Joint-Savings-Smart-Contract app is written in Solidity and uses the web3 li
 The web interface is rendered using the Remix IDE.
 JavaScript VM supports deployment of the smart contract.
 Ganache provides the Ethereum blockchain, including transactions and hashing.
+https://vanity-eth.tk/ was used to generate ETH addresses for testing.
 
 ---
 
 ## Installation Guide
 
-This app can be run in any browser using Remix and Ganache.
+This app can be run in any browser using Remix IDE.
 
 ---
 
