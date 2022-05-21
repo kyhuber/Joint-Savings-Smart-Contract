@@ -13,7 +13,7 @@ contract JointSavings {
 
     function withdraw(uint amount, address payable recipient) public {
         require(recipient == accountOne || recipient == accountTwo, "You don't own this account!");
-        require(amount > contractBalance, "Insufficient funds!");
+        require(amount <= contractBalance, "Insufficient funds!");
         if(lastToWithdraw != recipient) {
             lastToWithdraw = recipient;
         }
